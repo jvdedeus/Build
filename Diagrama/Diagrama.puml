@@ -1,0 +1,58 @@
+@startuml
+class Cliente {
+    -String nome
+    -String email
+    -String telefone
+    -String cpf
+    -int enderecoNumero
+    -String enderecoComplemento
+    -String enderecoLogradouro
+    -String enderecoBairro
+    -String enderecoCidade
+    -String enderecoUF
+    -String cep
+    +Cliente()
+    +String getNome()
+    +void setNome(String nome)
+    +String getEmail()
+    +void setEmail(String email)
+    +String getTelefone()
+    +void setTelefone(String telefone)
+    +String getCpf()
+    +void setCpf(String cpf)
+    +int getEnderecoNumero()
+    +void setEnderecoNumero(int enderecoNumero)
+    +String getEnderecoComplemento()
+    +void setEnderecoComplemento(String enderecoComplemento)
+    +String getEnderecoLogradouro()
+    +void setEnderecoLogradouro(String enderecoLogradouro)
+    +String getEnderecoBairro()
+    +void setEnderecoBairro(String enderecoBairro)
+    +String getEnderecoCidade()
+    +void setEnderecoCidade(String enderecoCidade)
+    +String getEnderecoUF()
+    +void setEnderecoUF(String enderecoUF)
+    +String getCep()
+    +void setCep(String cep)
+}
+
+class ClienteBuilder {
+    -Cliente cliente
+    +ClienteBuilder()
+    +Cliente build()
+    +ClienteBuilder setNome(String nome)
+    +ClienteBuilder setEmail(String email)
+    +ClienteBuilder setTelefone(String telefone)
+    +ClienteBuilder setCpf(String cpf)
+    +ClienteBuilder setEnderecoNumero(Integer enderecoNumero)
+    +ClienteBuilder setEnderecoComplemento(String enderecoComplemento)
+    +ClienteBuilder setEnderecoLogradouro(String enderecoLogradouro)
+    +ClienteBuilder setEnderecoBairro(String enderecoBairro)
+    +ClienteBuilder setEnderecoCidade(String enderecoCidade)
+    +ClienteBuilder setEnderecoUF(String enderecoUF)
+    +ClienteBuilder setCep(String cep)
+}
+
+ClienteBuilder ..> Cliente : builds >
+
+@enduml
